@@ -1,6 +1,7 @@
 This package takes a whole-genome sequence file and an annotation file (a GTF or GFF3 file in most cases) and uses them to create an SQLite database of intron annotation information. This package uniquely annotates intron class for every intron annotated in the annotation file, so it can be used to identify all U12-dependent introns in any genome with annotated introns. It also provides some wrapper functions for the sorts of SQL queries that would be useful for querying the database.
 
 Argument descriptions for create_db.py:
+
 Argument Name      | Description
 -----------------: | --------------------------------------------------------------------------------------------------------------
 -g --genome        | E.g. GRCh38 or hg38 for the latest version of the human genome.
@@ -11,8 +12,9 @@ Argument Name      | Description
 -gs --gene_symbols | If your genome has annotation information on Ensembl, you can pull gene names out of Biomart if you know which Biomart division (default, GRCh37, plants, metazoa, fungi) the genome is in by providing the name of the biomart division as the value to this argument (Googling the genome name and the word "ensembl" is the fastest way to find out which division it's in. If your genome is not annotated in Biomart and you still want to be able to search for introns using their gene, you can provide a path to a tab-delimited file with gene IDs (as annotated in the annotation file you provide) in the first column and gene symbols in the second column. If you don\'t want to be able to search for introns by gene names and/or don\'t want to deal with the Biomart thing, leave this blank.
 
 Argument descriptions for search_functions.py:
-Argument Name | Description
-------------: | -------------------------------------------------------------------------------------------------------------
+
+Argument Name                | Description
+---------------------------: | -------------------------------------------------------------------------------------------------------------
 -u12 --U12_search            | Single string that will be tokenized and used as input to a full-text search of the U12-type intron annotation information. Generally works best if you give it gene names/symbols, terminal dinucleotides, or Ensembl gene or transcript ids.
 -g --genomes                 | One or more genome assembly names (e.g. GRCh38 for human; whatever you used when building the database), separated by commas.
 -gid --gene_id               | Ensembl gene ID; separate multiple IDs with commas.
