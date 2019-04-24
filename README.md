@@ -2,14 +2,14 @@ This package takes a whole-genome sequence file and an annotation file (a GTF or
 
 Argument descriptions for create_db.py:
 
-Argument Name      | Description
------------------: | --------------------------------------------------------------------------------------------------------------
--g --genome        | E.g. GRCh38 or hg38 for the latest version of the human genome.
--t --tax_name      | E.g. Homo_sapiens; be sure to use snake_case or CamelCase.
--c --common_name   | E.g. human or rhesus_macaque; be sure to use snake_case or CamelCase.
--a --annotation    | Path to a gtf or gff3 file containing annotation information for the genome of interest. This pipeline was built using ones from Ensembl, but should work on any annotation files.
--s --sequence      | Path to a whole-genome FASTA file.
--gs --gene_symbols | If your genome has annotation information on Ensembl, you can pull gene names out of Biomart if you know which Biomart division (default, GRCh37, plants, metazoa, fungi) the genome is in by providing the name of the biomart division as the value to this argument (Googling the genome name and the word "ensembl" is the fastest way to find out which division it's in. If your genome is not annotated in Biomart and you still want to be able to search for introns using their gene, you can provide a path to a tab-delimited file with gene IDs (as annotated in the annotation file you provide) in the first column and gene symbols in the second column. If you don\'t want to be able to search for introns by gene names and/or don\'t want to deal with the Biomart thing, leave this blank.
+Argument Name        | Description
+-------------------: | --------------------------------------------------------------------------------------------------------------
+-g --genome          | E.g. GRCh38 or hg38 for the latest version of the human genome.
+-t --tax_name        | E.g. Homo_sapiens; be sure to use snake_case or CamelCase.
+-c --common_name     | E.g. human or rhesus_macaque; be sure to use snake_case or CamelCase.
+-a --annotation      | Path to a gtf or gff3 file containing annotation information for the genome of interest. This pipeline was built using ones from Ensembl, but should work on any annotation files.
+-s --sequence        | Path to a whole-genome FASTA file.
+-gs --gene_symbols   | If your genome has annotation information on Ensembl, you can pull gene names out of Biomart if you know which Biomart division (default, GRCh37, plants, metazoa, fungi) the genome is in by providing the name of the biomart division as the value to this argument (Googling the genome name and the word "ensembl" is the fastest way to find out which division it's in. If your genome is not annotated in Biomart and you still want to be able to search for introns using their gene, you can provide a path to a tab-delimited file with gene IDs (as annotated in the annotation file you provide) in the first column and gene symbols in the second column. If you don't want to be able to search for introns by gene names and/or don't want to deal with the Biomart thing, leave this blank.
 
 Argument descriptions for search_functions.py:
 
