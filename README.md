@@ -1,4 +1,4 @@
-This package takes a whole-genome sequence file and an annotation file (a GTF or GFF3 file in most cases) and uses them to create an SQLite database of intron annotation information. This package uniquely annotates intron class for every intron annotated in the annotation file, so it can be used to identify all U12-dependent introns in any genome with annotated introns. It also provides some wrapper functions for the sorts of SQL queries that would be useful for querying the database.
+This package takes a whole-genome sequence file and an annotation file (a GTF or GFF3 file in most cases) and uses them to create an SQLite database of intron annotation information. This package uniquely annotates intron class for every intron annotated in the annotation file, so it can be used to identify all U12-dependent introns in any genome with annotated introns. It also provides some wrapper functions for the sorts of SQL queries that would be useful for querying the database. If you use this, cite https://doi.org/10.1101/620658.
 
 Argument descriptions for create_db.py:
 
