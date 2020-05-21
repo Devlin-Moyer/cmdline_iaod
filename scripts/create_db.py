@@ -21,9 +21,9 @@ def create_db(args):
 
         print(f'Running intronIC on {args.genome} ({args.tax_name})')
         log_file.write(f'Running intronIC on {args.genome} ({args.tax_name})')
-        sp.run(f'python intronIC_devlin.py -nc -na -a {args.annotation}' +
+        sp.run(f'python intronIC_iaod.py -nc -na -a {args.annotation}' +
              f'-g {args.sequence} -n {args.genome}_cds', shell=True)
-        sp.run(f'python intronIC_devlin.py -nc -na -e -a {args.annotation}' +
+        sp.run(f'python intronIC_iaod.py -nc -na -e -a {args.annotation}' +
              f'-g {args.sequence} -n {args.genome}_exon', shell=True)
         print('Removing duplicate introns from intronIC output.')
         log_file.write('Removing duplicate introns.')
